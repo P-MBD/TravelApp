@@ -3,6 +3,7 @@ const styles = StyleSheet.create(
 {
     container:{
         margin: 32,
+        flex:1,
     },
     subtitle:{
         fontSize:20,
@@ -11,7 +12,8 @@ const styles = StyleSheet.create(
         marginBottom: 34,
     },
     row:{
-        flexDirection:'row'
+        flexDirection:'row',
+        flexWrap:'wrap',
     }
 });
 
