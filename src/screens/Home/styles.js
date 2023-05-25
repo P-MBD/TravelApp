@@ -14,6 +14,12 @@ const styles = StyleSheet.create(
     row:{
         flexDirection:'row',
         flexWrap:'wrap',
+    },
+    emptyText:{
+        textAlign:'center',
+        marginTop:24,
+        fontSize:12,
+        color:'rgb(0,0,0,0.5)',
     }
 });
 
