@@ -19,7 +19,7 @@ const styles = StyleSheet.create(
         textAlign:'center',
         marginTop:24,
         fontSize:12,
-        color:'rgb(0,0,0,0.5)',
+        color: 'rgba(0,0,0,0.5)',
     }
 });
 
