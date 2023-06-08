@@ -2,10 +2,11 @@ import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import styles from './styles';
 
-const  AttractionDetails = () => {
+const  AttractionDetails = ({route}) => {
+    const {item} = route?.params || {};
     return(
         <SafeAreaView>
-                 <Text>  Attraction Details</Text>
+                 <Text>{item?.name}</Text>
         </SafeAreaView>
     )
 }
