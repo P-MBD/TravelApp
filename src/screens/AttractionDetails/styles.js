@@ -39,6 +39,24 @@ const styles = StyleSheet.create({
         borderRadius:10,
         backgroundColor:'rgba(256, 256, 256, 0.35)',
     },
+    moreImages:{
+        color:'#fff',
+        fontWeight: 'bold',
+        fontSize:20,
+         top:12,
+         left: 10,
+    },
+    moreImagesContainer:{
+        position:'absolute',
+        backgroundColor:'rgb(0,0,0,0.38)',
+        width:40,
+        height:40,
+        top:8,
+        left: 4,
+        justifyContent:'center',
+        alignItems:'center'
+
+    }
 
 });
 
