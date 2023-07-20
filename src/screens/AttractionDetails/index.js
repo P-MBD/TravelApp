@@ -1,6 +1,8 @@
 import React from "react";
-import { Image, ImageBackground, Pressable, SafeAreaView, Text, View } from 'react-native';
+import { Image, ImageBackground, Pressable, SafeAreaView, Text, View,ScrollView } from 'react-native';
 import styles from './styles';
+import Title from '../../components/Title'
+import InfoCard from "../../components/InfoCard";
 
 const  AttractionDetails = ({navigation,route}) => {
     const {item} = route?.params || {};
@@ -17,6 +19,7 @@ const  AttractionDetails = ({navigation,route}) => {
     };
     return(
         <SafeAreaView style={styles.container}>
+            <ScrollView>
              <ImageBackground style={styles.mainImage} 
              imageStyle={{ borderRadius: 20 }} 
              source={{ uri: mainImage }} >
@@ -46,11 +49,20 @@ const  AttractionDetails = ({navigation,route}) => {
 
               </ImageBackground>
 
-              <View>
-                  <Text>{item?.name}</Text>
-              </View>
-         
               
+<View style={styles.headerContainer}>
+             <View style={styles.textContainer}>
+                       <Title style={styles.title} text={item?.name}></Title>
+                      <Text style={styles.city}>{item?.city}</Text>
+            </View>
+                        <Title style={styles.price} text={item?.entry_price}/>
+</View>
+             
+                    <InfoCard text={item?.address} icon={require('../../assets/location.jpg')} />
+                    <InfoCard text={item?.opening_time} icon={require('../../assets/share.png')} />
+
+
+                    </ScrollView>
         </SafeAreaView>
     )
 }

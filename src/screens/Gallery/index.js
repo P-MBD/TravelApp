@@ -1,11 +1,15 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import {  FlatList, Image,SafeAreaView, Text } from "react-native";
 import styles from './styles';
 
-const  Gallery = () => {
+const  Gallery = ({route}) => {
+    const { images } = route?.params || {};
+    console.log('images:>>',images)
     return(
 <SafeAreaView>
-    <Text> Gallery</Text>
+    <FlatList style={{ paddingHorizontal: 24, marginBottom: 24 }} data={images} renderItem={({ item }) => (
+                    <Image source={{ uri: item }} style={styles.image} />
+                )} />
 </SafeAreaView>
     )
 }
